@@ -66,8 +66,41 @@ body {
 
 .data-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   flex-grow: 1;
-  height: 100px;
+  gap: 12px;
+  height: 150px;
   border: 3px solid black;
+}
+
+.day-name-data-container {
+  border: 3px solid yellowgreen;
+}
+
+.day-of-week-data {
+  border: 3px solid palevioletred;
+}
+
+.emo-temp-data-container {
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  width: 100%;
+  border: 3px solid yellowgreen;
+}
+
+.temperature-data {
+  display: flex;
+  justify-content: center;
+  border: 3px solid palevioletred;
+}
+
+.emoji-data {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid palevioletred;
+  flex-grow: 1;
 }
