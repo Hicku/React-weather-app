@@ -49,9 +49,10 @@ body {
   justify-content: center;
   align-items: center;
   border: 3px solid purple;
-  margin-top: 80px;
+  margin-top: 10px;
   height: 200px;
   width: 400px;
+  font-size: xx-large;
 }
 
 .day-data-component {
@@ -70,17 +71,16 @@ body {
   justify-content: center;
   align-items: center;
   flex-grow: 1;
-  gap: 12px;
   height: 150px;
   border: 3px solid black;
 }
 
-.day-name-data-container {
-  border: 3px solid yellowgreen;
-}
-
 .day-of-week-data {
   border: 3px solid palevioletred;
+}
+
+.day-name-data-container {
+  border: 3px solid yellowgreen;
 }
 
 .emo-temp-data-container {
@@ -103,4 +103,13 @@ body {
   align-items: center;
   border: 3px solid palevioletred;
   flex-grow: 1;
+}
+
+.main-logo.container {
+  border: 3px solid blue;
+}
+
+.weather-icon-container {
+  display: flex;
+  justify-content: center;
 }
