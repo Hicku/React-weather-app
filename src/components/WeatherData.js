@@ -11,7 +11,7 @@ export default function WeatherData({ fourDays, weatherData }) {
     <div className="weather-data-container">
       <div className="city-name-container">
         <div>
-          <div>{weatherData.city.name}</div>
+          <div className="city-name">{weatherData.city.name}</div>
           <div className="weather-icon-container">
             <img
               src={`https://openweathermap.org/img/wn/${weatherData.list[0].weather[0].icon}@2x.png`}

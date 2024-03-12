@@ -26,10 +26,10 @@ export default function DayData({ day, weatherData, fourDays }) {
   // console.log(currentDayData.weather[0].icon);
   return (
     <div className="data-container">
-      <div className="day-name-data-container">
-        <div className="day-of-week-data">{day}</div>
-      </div>
       <div className="emo-temp-data-container">
+        <div className="day-name-data-container">
+          <div className="day-of-week-data">{day}</div>
+        </div>
         <div className="emoji-data">
           {
             <img
@@ -38,7 +38,7 @@ export default function DayData({ day, weatherData, fourDays }) {
           }
         </div>
         <div className="temperature-data">
-          {`${Math.floor(currentDayData.main.temp)}\u00B0`}
+          {`${Math.floor(currentDayData.main.temp)}\u00B0C`}
         </div>
       </div>
     </div>
