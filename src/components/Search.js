@@ -2,7 +2,12 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
-export default function Search({ searchCity, setSearchCity }) {
+export default function Search({
+  searchCity,
+  setSearchCity,
+  onGetWeatherData,
+  setCurrentDay,
+}) {
   const [isHover, setIsHover] = useState(false);
 
   const handleMouseEnter = () => {
@@ -19,6 +24,7 @@ export default function Search({ searchCity, setSearchCity }) {
       await getCityCoordinates(searchCity);
       if (!getCityCoordinates.ok) {
       }
+      setCurrentDay(0);
     } catch (error) {
       console.error("Error", error.message);
     }
@@ -37,9 +43,9 @@ export default function Search({ searchCity, setSearchCity }) {
       if (data.length > 0) {
         const city = data[0];
         const coord = { latitude: city.lat, longitude: city.lon };
-        console.log(coord);
 
-        return coord;
+        onGetWeatherData(coord.latitude, coord.longitude);
+        setSearchCity("");
       } else {
         throw new Error("City not found");
       }

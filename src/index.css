@@ -113,6 +113,15 @@ body {
   color: #f9f871;
 }
 
+.current-day-temp {
+  display: flex;
+  justify-content: center;
+  color: #f9f871;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .emoji-data {
   display: flex;
   justify-content: center;
