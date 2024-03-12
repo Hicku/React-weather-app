@@ -12,6 +12,7 @@ function App() {
   const [latitude, setLatitude] = useState();
   const [longitude, setLongitude] = useState();
   const [weatherData, setWeatherData] = useState({});
+  const [searchCity, setSearchCity] = useState("");
 
   const apiKey = "c02a4b3f35a12461ae6bd39c333189a1";
 
@@ -32,6 +33,12 @@ function App() {
       console.error("Error fetching weather data:", err.message);
     }
   };
+
+  // useEffect(() => {
+
+  //   };
+  //   getCityCoordinates();
+  // }, [searchCity]);
 
   useEffect(() => {
     // Get location using web geolocation
@@ -97,7 +104,11 @@ function App() {
   return (
     <div className="App">
       <div className="search-container">
-        <Search />
+        <Search
+          searchCity={searchCity}
+          setSearchCity={setSearchCity}
+          // onGetCityCoordinates={getCityCoordinates}
+        />
       </div>
       <div className="weather-data-component">
         <WeatherData fourDays={fourDays} weatherData={weatherData} />
